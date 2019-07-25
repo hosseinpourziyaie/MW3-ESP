@@ -2,8 +2,8 @@
 // Retards Project (ahah)
 //
 // Component: TeknoMW3_ESP
-// Purpose: Draw Red Boxes so nub hacker wont be indicated
-//                          as noob looser in server anymore
+// Purpose: Draw Red Boxes so nub hacker wont be flaged as noob looser
+//                                    by other players in server anymore
 //
 // Initial author : Astro
 // Developed by   : Hosseinpourziyaie
@@ -165,13 +165,13 @@ DWORD WINAPI LoopFunction( LPVOID lpParam )
 #pragma endregion
 
 #pragma region Disconnect(Good for Zom Rage Quit)
-		if(GetAsyncKeyState(VK_END))
+		/*if(GetAsyncKeyState(VK_END))//TODO : Fix This
 		{
 			char Buff[256];
 			sprintf_s(Buff, "disconnect");
 			PopupHUDNotify("^1PLATFORM_DISCONNECTED_FROM_SERVER");
 			SendCmd(0, 0, Buff);
-		}
+		}*/
 #pragma endregion
 
 		Sleep(100); //give your cpu a break (you can make it higher if you like)
